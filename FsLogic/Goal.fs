@@ -63,6 +63,12 @@ module Goal =
         static member ( *=* ) ( { Uni = u }:Term<'a>, { Uni = v }: Term<'a>) = unifyImpl u v
         static member ( *<>* )( { Uni = u }:Term<'a>, { Uni = v }: Term<'a>) = disunifyImpl u v
     
+    let unify ( { Uni = u }:Term<'a>, { Uni = v }: Term<'a>) = 
+        unifyImpl u v    
+
+    let disunify ( { Uni = u }:Term<'a>, { Uni = v }: Term<'a>) = 
+        disunifyImpl u v    
+
     let private newVarTerm<'a>() : Term<'a> = { Uni = Substitution.newVar() }
          
     let private nilProj (typex:Type) = 

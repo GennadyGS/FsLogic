@@ -1,3 +1,5 @@
 Unquote
 expecto
 FSharp.Core
+Microsoft.NET.Test.Sdk
+YoloDev.Expecto.TestSdk

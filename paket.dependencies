@@ -8,3 +8,5 @@ nuget FSharp.Core
 nuget FAKE prerelease
 nuget Unquote
 nuget Expecto
+nuget Microsoft.NET.Test.Sdk
+nuget YoloDev.Expecto.TestSdk

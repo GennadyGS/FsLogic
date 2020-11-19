@@ -90,13 +90,13 @@ module Goal =
         | xs when xs |> Seq.forall ReifiedTerm.IsDetermined -> 
             xs |> Seq.map ReifiedTerm.GetDeterminedValue |> Seq.toArray |> create |> Det
         | _ -> 
-            Half (projunis |> Seq.toList)
+            ReifiedTerm.Half (projunis |> Seq.toList)
 
     let cons (x:Term<'a>) (xs:Term<'a list>) : Term<'a list> = 
         let rec flattenHalf rterm =
             match rterm with
-            | Half [x;(Half xs)] -> Half (flattenHalf x :: List.map flattenHalf xs)
-            | Half [x;(Det v)] when v = box [] -> Half [(flattenHalf x)]
+            | Half [x;(Half xs)] -> ReifiedTerm.Half (flattenHalf x :: List.map flattenHalf xs)
+            | Half [x;(Det v)] when v = box [] -> ReifiedTerm.Half [(flattenHalf x)]
             | _ -> rterm
 
         let consProj (typex:Type) = 

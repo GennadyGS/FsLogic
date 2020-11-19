@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <GenerateProgramFile>false</GenerateProgramFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="UnificationTest.fs" />
     <Compile Include="RelationsTest.fs" />
     <Compile Include="ArithmeticTest.fs" />
     <Compile Include="Program.fs" />
-    <None Include="App.config" />
     <None Include="Script.fsx" />
     <None Include="paket.references" />
   </ItemGroup>

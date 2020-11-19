@@ -224,3 +224,6 @@ pip-log.txt
 .fake/
 .paket/paket.exe
 paket-files/paket.restore.cached
+
+# Visual Studio cache/options directory
+.vs/
